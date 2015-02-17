@@ -1,9 +1,13 @@
 Stand up Apache Spark on any machine using Vagrant.  Also includes some sample jobs for Word Count, and for log file processing.
 
+Vagrant is a front-end for VirtualBox, and allows the easy creation and launching of virtual machines on any platform.  The included VagrantFile here will create and completely configure a Linux VM with Apache Spark.
+
+Please see the Vagrant site for further details about Vagrant.
+
 Dependencies:
 
-[Vagrant](http://www.vagrantup.com/downloads.html)
-[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+[Install Vagrant](http://www.vagrantup.com/downloads.html)
+[Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
 
