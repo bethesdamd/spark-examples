@@ -5,6 +5,7 @@ Dependencies:
 [VirtualBox](http://www.vagrantup.com/downloads.html)
 Vagrant
 
+
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
 
 Vagrant configuration information is from: http://thegrimmscientist.com/2014/12/01/vagrant-tutorial-spark-in-a-vm/ which references 
