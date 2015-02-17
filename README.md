@@ -18,6 +18,17 @@ Dependencies:
 7. **:load /vagrant_data/http_logs.scala**  (will run that script)
 8. After quite a bit of output you will see the program results
 
+The results will look something like this:
+(1450,/english/index.html)
+(1181,/french/competition/matchprog8860.htm)
+(940,/french/competition/matchstat8860.htm)
+(934,/english/competition/matchprog8860.htm)
+(932,/)
+(890,/french/index.html)
+(849,/english/competition/matchstat8860.htm)
+(339,/english/frntpage.htm)
+...
+
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
 
 Vagrant configuration information is from: http://thegrimmscientist.com/2014/12/01/vagrant-tutorial-spark-in-a-vm/ which references 
