@@ -6,8 +6,8 @@ Please see the Vagrant site for further details about Vagrant.
 
 Dependencies:
 
-[Install Vagrant](http://www.vagrantup.com/downloads.html)
-[Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [Install Vagrant](http://www.vagrantup.com/downloads.html)
+- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 1. Clone this repository
 2. Run **vagrant up**.  This will take a while as software is downloaded and installed.  You will then have a running VM but you won't be connected to it yet.
