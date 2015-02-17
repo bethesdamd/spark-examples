@@ -2,9 +2,8 @@ Stand up Apache Spark on any machine using Vagrant.  Also includes some sample j
 
 Dependencies:
 
-[VirtualBox](http://www.vagrantup.com/downloads.html)
-Vagrant
-
+[Vagrant](http://www.vagrantup.com/downloads.html)
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
 
