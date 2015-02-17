@@ -10,13 +10,13 @@ Dependencies:
 [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 1. Clone this repository
-2. Run 'vagrant up'.  This will take a while as software is downloaded and installed.  You will then have a running VM but you won't be connected to it yet.
-3. Run 'vagrant ssh' to connect to your VM
-4. cd spark-1.1.0-bin-hadoop1  (your version may vary e.g. spark-1.2.0-bin-hadoop1)
-5. bin/spark-shell
+2. Run **vagrant up**.  This will take a while as software is downloaded and installed.  You will then have a running VM but you won't be connected to it yet.
+3. Run **vagrant ssh** to connect to your VM
+4. **cd spark-1.1.0-bin-hadoop1**  (your version may vary e.g. spark-1.2.0-bin-hadoop1)
+5. **bin/spark-shell**
 6. You are now in the spark-shell environment
-7. :load http_logs.scala  (will run that script)
-
+7. **:load http_logs.scala**  (will run that script)
+8. After quite a bit of output you will see the program results
 
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
 
