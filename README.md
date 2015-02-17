@@ -15,7 +15,7 @@ Dependencies:
 4. **cd spark-1.1.0-bin-hadoop1**  (your version may vary e.g. spark-1.2.0-bin-hadoop1)
 5. **bin/spark-shell**
 6. You are now in the spark-shell environment
-7. **:load http_logs.scala**  (will run that script)
+7. **:load /vagrant_data/http_logs.scala**  (will run that script)
 8. After quite a bit of output you will see the program results
 
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
