@@ -23,12 +23,19 @@ The results will look something like this:
 (1450,/english/index.html)
 
 (1181,/french/competition/matchprog8860.htm)
+
 (940,/french/competition/matchstat8860.htm)
+
 (934,/english/competition/matchprog8860.htm)
+
 (932,/)
+
 (890,/french/index.html)
+
 (849,/english/competition/matchstat8860.htm)
+
 (339,/english/frntpage.htm)
+
 ...
 
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
