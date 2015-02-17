@@ -9,9 +9,9 @@ Dependencies:
 [Install Vagrant](http://www.vagrantup.com/downloads.html)
 [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-Clone this repository
-Run 'vagrant up'.  This will take a while as software is downloaded and installed.  You will then have a running VM but you won't be connected to it yet.
-Run 'vagrant ssh' to connect to your VM
+1. Clone this repository
+2. Run 'vagrant up'.  This will take a while as software is downloaded and installed.  You will then have a running VM but you won't be connected to it yet.
+3. Run 'vagrant ssh' to connect to your VM
 
 
 These jobs are designed to be run from within the spark console (as opposed to using spark-submit).
