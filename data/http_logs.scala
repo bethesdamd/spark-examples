@@ -3,22 +3,27 @@
 // 979509 - - [24/Jun/1998:15:29:34 +0000] "GET /english/competition/matchstat8862.htm HTTP/1.0" 200 18268
 
 import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import scala.util.matching.Regex
 
 val file = sc.textFile("/vagrant_data/world_cup_200k")
 
-val pattern = """GET (.+) HTTP""".r   // Regular expression to extract url
-
-// From the raw data RDD create a new RDD containing tuples of type (url, 1)
-val urls = file.map { line =>
-	val md = pattern.findAllIn(line).matchData
-	if (!md.isEmpty) {
+// From the raw data RDD create a new RDD containing tuples
+def myparse(rdd: RDD[String], regex:Regex):RDD[(String, Int)] = rdd.map { line =>
+	val md = regex.findAllIn(line).matchData
+	val s = line.split(" ")
+	if (!md.isEmpty && s.size == 10) {
 		(md.next.group(1).toString, 1)
 	} else {
 		("parsefailed", 1)
 	}
 }
+
+val pattern = """GET (.+) HTTP""".r   // Regular expression to extract url
+val urls = myparse(file, pattern)
+
 // Remove uninteresting files
-val filtered = urls.filter(tup  => 
+val filtered = urls.filter(tup  =>
 	!tup._1.contains(".gif") && 
 	!tup._1.contains(".jpg") && 
 	!tup._1.contains(".js") &&
@@ -32,6 +37,21 @@ r.take(10).foreach(println)  // print out some intermediate results
 val swap = r.map(tup => (tup._2, tup._1))  
 val sorted = swap.sortByKey(false)
 
-// sorted is url and frequency sorted by frequency descending
+// sorted is url and frequency sorted by frequency descending.  This shows the most popular url's.
 sorted.take(15).foreach(println)
 
+// Which client requested the most pages?
+val pattern = """^([\w\-]+)""".r   // Regular expression to extract url
+
+// requestors = (client_id, 1)
+// (org.apache.spark.rdd.RDD[(String, Int)] ((926664,1), (1264965,1), (677046,1) ... )
+val requests = myparse(file, pattern)
+
+// Which clients made the most requests?
+val most_client_requests = requestors.reduceByKey(_ + _).  // sum all the requests, by client 
+	map(x => (x._2, x._1)).  // swap the values so we can sort by key in next step
+	sortByKey(false) // sort by number of requests, descending
+	
+	
+	
+	
