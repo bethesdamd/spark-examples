@@ -1,7 +1,7 @@
 /*
  Apache Spark GraphX processing example
  Create a graph from twitter data and calculate the connected components and the triangle counts
- See https://spark.apache.org/docs/0.9.0/graphx-programming-guide.html for more details about GraphX
+ See https://spark.apache.org/docs/1.2.1/graphx-programming-guide.html for more details about GraphX
  and these operations
 */
 
